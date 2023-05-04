@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "BPAI05_03ExoPlayer"
+rootProject.name = "DC4_05ExoPlayer"
 include ':app'

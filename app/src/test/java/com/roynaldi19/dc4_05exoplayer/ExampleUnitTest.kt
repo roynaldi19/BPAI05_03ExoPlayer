@@ -1,4 +1,4 @@
-package com.roynaldi19.bpai05_03exoplayer
+package com.roynaldi19.dc4_05exoplayer
 
 import org.junit.Test
 

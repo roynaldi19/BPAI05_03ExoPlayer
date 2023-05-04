@@ -1,4 +1,4 @@
-package com.roynaldi19.bpai05_03exoplayer
+package com.roynaldi19.dc4_05exoplayer
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,7 @@ import androidx.core.view.WindowInsetsControllerCompat
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.util.Util
-import com.roynaldi19.bpai05_03exoplayer.databinding.ActivityMainBinding
+import com.roynaldi19.dc4_05exoplayer.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     companion object {
