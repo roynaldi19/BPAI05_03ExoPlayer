@@ -16,25 +16,25 @@ class MainActivity : AppCompatActivity() {
         const val URL_AUDIO = "https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=indie-folk-king-around-here-15045.mp3"
     }
 
-    private val viewBinding by lazy(LazyThreadSafetyMode.NONE) {
+    private val binding by lazy(LazyThreadSafetyMode.NONE) {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(viewBinding.root)
+        setContentView(binding.root)
     }
 
     private var player: ExoPlayer? = null
 
     private fun initializePlayer() {
-        val mediaItem = MediaItem.fromUri(URL_VIDEO_DICODING)
-        val anotherMediaItem = MediaItem.fromUri(URL_AUDIO)
+        val mediaVideo = MediaItem.fromUri(URL_VIDEO_DICODING)
+        val mediaAudio = MediaItem.fromUri(URL_AUDIO)
 
         player = ExoPlayer.Builder(this).build().also { exoPlayer ->
-            viewBinding.videoView.player = exoPlayer
-            exoPlayer.setMediaItem(mediaItem)
-            exoPlayer.addMediaItem(anotherMediaItem)
+            binding.videoView.player = exoPlayer
+            exoPlayer.setMediaItem(mediaVideo)
+            exoPlayer.addMediaItem(mediaAudio)
             exoPlayer.prepare()
         }
     }
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun hideSystemUI() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        WindowInsetsControllerCompat(window, viewBinding.videoView).let { controller ->
+        WindowInsetsControllerCompat(window, binding.videoView).let { controller ->
             controller.hide(WindowInsetsCompat.Type.systemBars())
             controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
